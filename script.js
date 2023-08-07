@@ -1,11 +1,12 @@
-//your JS code here. If required.
 document.addEventListener("DOMContentLoaded", function () {
   const browserInfoDiv = document.getElementById("browser-info");
-  const browserName = getBrowserName();
-  const browserVersion = getBrowserVersion();
+  if (browserInfoDiv) {
+    const browserName = getBrowserName();
+    const browserVersion = getBrowserVersion();
 
-  const message = "You are using " + browserName + " version " + browserVersion;
-  browserInfoDiv.textContent = message;
+    const message = "You are using " + browserName + " version " + browserVersion;
+    browserInfoDiv.textContent = message;
+  }
 });
 
 function getBrowserName() {
